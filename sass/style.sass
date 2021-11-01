@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap')
+
+html
+    box-sizing: border-box
+    font-family: Arial
+    
+*
+    box-sizing: inherit
+
+#cards
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    display: grid
+    grid-template-columns: repeat(3, 1fr) 
+
+.card__heading
+    height: 52px
+    width: 100%
+    background: #0D274D
+    border: 1px solid rgba(255, 255, 255, 0.2)
+    border-left: none 
+    font-family: Montserrat, sans-serif
+    font-size: 16px
+    line-height: 22px
+    color: #ffffff
+
+.card__info
+    border: 1px solid #0D274D 
+    border-left: none
+    height: 400px
+    width: 100%
+
+#card__container1 .card__info
+    border-left: 1px solid #0D274D 
+
+.card__benefit
+    display: flex
+    align-items: baseline
+
+.card__benefit__text
+    transform: translateX(29px)
+    margin-bottom: 10px
+    font-size: 15px
+    line-height: 21.5px
+    color: #000000
+    
+.card__benefit__checkmark
+    position: absolute
+    margin-top: 2px
+
+.line1
+    position: absolute
+    top: 9.53px
+    width: 7.36px
+    height: 2.29px
+    background: #0E9A0B
+    transform: matrix(0.71, 0.73, -0.68, 0.71, 0, 0)
+    
+.line2 
+    position: absolute
+    top: 6.24px
+    left: 3.5px
+    width: 16.03px
+    height: 2.29px
+    background: #0E9A0B
+    transform: matrix(0.71, -0.73, 0.68, 0.71, 0, 0)
+
+.card__price__text, .card__price__text1, .card__price__text2
+    font-weight: bold
+    font-size: 15px
+    line-height: 21px
+    color: #282828
+    text-align: center
+
+.card__price, .card__price1, .card__price2
+    font-size: 14px
+    line-height: 26px
+    text-align: center
+    width: 199px
+    span
+        font-weight: 900
+        font-size: 20px
+        color: #0E9A0B
+
+.card__line
+    width: 238px
+    height: 0px
+    border-top: 1px solid #00BCEB
+    margin: 0 auto
+
+.card__variants
+    display: grid
+    grid-auto-flow: column
+
+.card__variant
+    display: flex
+    align-items: center
+
+.card__variant__text
+    font-size: 16px
+    line-height: 21px
+    text-decoration: underline
+    transform: translateX(15px) 
+
+.card__variant__triangle
+    width: 9px
+    height: 15px
+
+.polygon
+    fill: #00BCEB
+
+.card__button
+    width: 250px
+    height: 46px
+    background: #00BCEB
+    border: 1px solid #00BCEB
+    border-radius: 6px
+    margin: 0 auto
+    display: flex
+    align-items: center
+    justify-content: center
+    div
+        color: white
+        font-weight: bold
+        font-size: 18px
+        line-height: 21px
+
+
+#card__container1
+    width: 281px
+    .card__heading
+        div
+            transform: translate(46px, 15px)       
+    .card__benefit
+        transform: translate(14px,14px)
+    .card__benefit__text
+        width: 224px
+    .card__price__text
+        transform: translate(66px,32px)
+        width: 148px
+    .card__price
+        transform: translate(39px,39px)
+    .card__line
+        transform: translateY(82px)
+    .card__variants
+        transform: translate(15.5px,91px)
+        grid-template-rows: repeat(3,28px)
+        grid-template-columns: repeat(2,131px)
+    .card__button
+        transform: translateY(119px)
+
+#card__container2
+    width: 320px
+    .card__heading
+        div
+            transform: translate(57px, 15px)       
+    .card__benefit
+        transform: translate(14px,16px)
+    .card__benefit__text
+        width: 224px
+    .card__price__text
+        transform: translate(63px,54px)
+        width: 186px
+    .card__price
+        transform: translate(57px,57px)
+    .card__line
+        transform: translateY(104px)
+    .card__variants
+        transform: translate(15.5px,111px)
+        grid-template-rows: repeat(2,28px)
+        grid-template-columns: repeat(2,154px)
+    .card__button
+        transform: translateY(168px)
+        
+#card__container3
+    width: 327px
+    .card__heading
+        div
+            transform: translate(101px, 15px)       
+    .card__benefit
+        transform: translate(14px,16px)
+    .card__benefit__text
+        width: 237px
+    .card__price__text1
+        transform: translate(41px,31px)
+        width: 230px
+    .card__price1
+        transform: translate(59px,35px)
+    .card__price__text2
+        transform: translate(47px,47px)
+        width: 230px
+    .card__price2
+        transform: translate(74px,51px)
+    .card__line
+        transform: translateY(64px)
+    .card__variants
+        transform: translate(15.5px,71px)
+        grid-template-rows: repeat(3,28px)
+        grid-template-columns: repeat(2,154px)
+    .card__button
+        transform: translateY(101px)
+
+@media (max-width: 992px)
+    #cards
+        width: 100%
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: flex-start
+        left: 0
+        top: 0
+        transform: none
+        padding: 50px 100px
+
+    #card__container1, #card__container2, #card__container3
+        width: 50%
+
+    #card__container1, #card__container2
+
+        .card__heading
+            display: flex
+            justify-content: center
+            align-items: center
+            div    
+                transform: none
+
+        .card__benefit__all
+            display: flex
+            flex-direction: column
+            align-items: center
+            width: 90%
+
+        .card__benefit
+            transform: translate(0,14px)
+            margin: 0 auto
+            
+        .card__benefit__text
+            width: 100%
+            overflow: hidden
+            
+        .card__price__text
+            transform: none
+            margin: 50px auto 0
+
+        .card__price
+            transform: none
+            margin: 0 auto 
+
+        .card__line
+            margin-top: 35px
+            transform: none
+
+    #card__container1
+        .card__variants
+            transform: none
+            justify-content: center
+            margin-top: 14px
+            margin-left: 14px
+
+        .card__button
+            transform: none
+            margin-top: 42px
+
+    #card__container2
+        .card__variants
+            transform: none
+            justify-content: center
+            margin-top: 14px
+            margin-left: 14px
+            transform: translateX(15.5px)
+
+        .card__button
+            transform: none
+            margin-top: 70px
+
+    #card__container3
+
+        .card__heading
+            display: flex
+            justify-content: center
+            align-items: center
+            div    
+                transform: none
+
+        .card__benefit__all
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 100%
+
+        .card__price__text1
+            transform: none
+            margin: 20px auto 0
+
+        .card__price1
+            transform: none
+            margin: 0 auto 
+
+        .card__price__text2
+            transform: none
+            margin: 10px auto 0
+
+        .card__price2
+            transform: none
+            margin: 0 auto 
+
+        .card__line
+            margin-top: 16px
+            transform: none
+
+        .card__variants
+            transform: none
+            justify-content: center
+            margin-top: 14px
+            margin-left: 14px
+            transform: translateX(15.5px)
+
+        .card__button
+            transform: none
+            margin-top: 41px
+
+        .card__info
+            border-left: 1px solid #0D274D 
+
+@media (max-width: 768px)
+    #cards
+        flex-direction: column
+        justify-content: center
+        margin: 20px 0
+        padding: 0
+        overflow-x: hidden
+
+    #card__container1, #card__container2, #card__container3
+        width: 60%
+        margin: 0 auto
+
+    #card__container2
+        .card__info
+            border-left: 1px solid #0D274D
+
+@media (max-width: 480px)
+    #cards
+        width: 100%
+        padding: 0
+        margin: 0
+        overflow-x: hidden
+
+    #card__container1, #card__container2, #card__container3
+        width: 100%
+        margin: 0
